@@ -55,7 +55,7 @@ set(ROS_ALARMS_SRCS
  src/${PROJECT_NAME}/broadcaster.cpp
  src/${PROJECT_NAME}/alarm_proxy.cpp
 )
-add_library(${PROJECT_NAME} ${ros_alarms_srcs})
+add_library(${PROJECT_NAME} ${ROS_ALARMS_SRCS})
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_compile_options(${PROJECT_NAME} PRIVATE -g -Wall -std=c++11)
 add_dependencies(ros_alarms ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
